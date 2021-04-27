@@ -1,0 +1,16 @@
+.menu-item-active a,
+.menu .menu-item a:hover,
+.menu .menu-item span.exturl:hover {
+  background: transparent;
+  border-bottom: 1px solid var(--link-hover-color) !important;
+mobile()
+}
+.menu .menu-item a,
+.menu .menu-item span.exturl {
+  border-bottom: 1px solid transparent;
+mobile()
+}
+.menu .menu-item .badge {
+  background: $gainsboro;
+  padding: 1px 4px;
+}

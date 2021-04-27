@@ -1,0 +1,23 @@
+.site-nav-toggle,
+.site-nav-right {
+  display: none;
+mobile()
+}
+.site-nav-toggle .toggle,
+.site-nav-right .toggle {
+  color: var(--text-color);
+  padding: 10px;
+  width: 22px;
+}
+.site-nav-toggle .toggle .toggle-line,
+.site-nav-right .toggle .toggle-line {
+  background: var(--text-color);
+  border-radius: 1px;
+}
+.site-nav {
+  display: block;
+mobile()
+}
+.site-nav.site-nav-on {
+  display: block;
+}

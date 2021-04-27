@@ -1,0 +1,27 @@
+.sub-menu {
+  background: var(--content-bg-color);
+  border-bottom: 1px solid $table-border-color;
+  margin: 0;
+  padding: 6px 0;
+}
+.sub-menu .menu-item {
+  display: inline-block;
+}
+.sub-menu .menu-item a,
+.sub-menu .menu-item span.exturl {
+  background: transparent;
+  margin: 5px 10px;
+  padding: initial;
+}
+.sub-menu .menu-item a:hover,
+.sub-menu .menu-item span.exturl:hover {
+  background: transparent;
+  color: $sidebar-highlight;
+}
+.sub-menu .menu-item-active a {
+  border-bottom-color: $sidebar-highlight;
+  color: $sidebar-highlight;
+}
+.sub-menu .menu-item-active a:hover {
+  border-bottom-color: $sidebar-highlight;
+}

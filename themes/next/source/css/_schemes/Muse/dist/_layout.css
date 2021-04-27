@@ -1,0 +1,15 @@
+.header-inner {
+  padding-top: 100px;
+mobile()
+}
+.main-inner {
+  padding-bottom: 60px;
+}
+.content {
+  padding-top: 70px;
+mobile()
+}
+embed {
+  display: block;
+  margin: 0 auto 25px auto;
+}

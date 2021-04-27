@@ -1,0 +1,127 @@
+.post-body .note {
+  border-radius: $note-border-radius;
+  margin-bottom: 20px;
+  padding: 1em;
+  position: relative;
+}
+.post-body .note h2,
+.post-body .note h3,
+.post-body .note h4,
+.post-body .note h5,
+.post-body .note h6 {
+  margin-top: 3px;
+  border-bottom: initial;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.post-body .note p:first-child,
+.post-body .note ul:first-child,
+.post-body .note ol:first-child,
+.post-body .note table:first-child,
+.post-body .note pre:first-child,
+.post-body .note blockquote:first-child,
+.post-body .note img:first-child {
+  margin-top: 0;
+}
+.post-body .note p:last-child,
+.post-body .note ul:last-child,
+.post-body .note ol:last-child,
+.post-body .note table:last-child,
+.post-body .note pre:last-child,
+.post-body .note blockquote:last-child,
+.post-body .note img:last-child {
+  margin-bottom: 0;
+}
+.post-body .note:not(.no-icon) {
+  padding-left: 2.5em;
+}
+.post-body .note:not(.no-icon)::before {
+  font-size: 1.5em;
+  left: 0.4em;
+  position: absolute;
+  top: calc(50% - 1em);
+}
+.post-body .note.default {
+  border-left-color: $note-default-border;
+}
+.post-body .note.default h2,
+.post-body .note.default h3,
+.post-body .note.default h4,
+.post-body .note.default h5,
+.post-body .note.default h6 {
+  color: $note-default-text;
+}
+.post-body .note.default:not(.no-icon)::before {
+  content: $note-default-icon;
+  color: $note-default-text;
+}
+.post-body .note.primary {
+  border-left-color: $note-primary-border;
+}
+.post-body .note.primary h2,
+.post-body .note.primary h3,
+.post-body .note.primary h4,
+.post-body .note.primary h5,
+.post-body .note.primary h6 {
+  color: $note-primary-text;
+}
+.post-body .note.primary:not(.no-icon)::before {
+  content: $note-primary-icon;
+  color: $note-primary-text;
+}
+.post-body .note.info {
+  border-left-color: $note-info-border;
+}
+.post-body .note.info h2,
+.post-body .note.info h3,
+.post-body .note.info h4,
+.post-body .note.info h5,
+.post-body .note.info h6 {
+  color: $note-info-text;
+}
+.post-body .note.info:not(.no-icon)::before {
+  content: $note-info-icon;
+  color: $note-info-text;
+}
+.post-body .note.success {
+  border-left-color: $note-success-border;
+}
+.post-body .note.success h2,
+.post-body .note.success h3,
+.post-body .note.success h4,
+.post-body .note.success h5,
+.post-body .note.success h6 {
+  color: $note-success-text;
+}
+.post-body .note.success:not(.no-icon)::before {
+  content: $note-success-icon;
+  color: $note-success-text;
+}
+.post-body .note.warning {
+  border-left-color: $note-warning-border;
+}
+.post-body .note.warning h2,
+.post-body .note.warning h3,
+.post-body .note.warning h4,
+.post-body .note.warning h5,
+.post-body .note.warning h6 {
+  color: $note-warning-text;
+}
+.post-body .note.warning:not(.no-icon)::before {
+  content: $note-warning-icon;
+  color: $note-warning-text;
+}
+.post-body .note.danger {
+  border-left-color: $note-danger-border;
+}
+.post-body .note.danger h2,
+.post-body .note.danger h3,
+.post-body .note.danger h4,
+.post-body .note.danger h5,
+.post-body .note.danger h6 {
+  color: $note-danger-text;
+}
+.post-body .note.danger:not(.no-icon)::before {
+  content: $note-danger-icon;
+  color: $note-danger-text;
+}

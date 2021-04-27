@@ -1,0 +1,33 @@
+.sidebar-nav {
+  margin: 0;
+  padding-bottom: 20px;
+  padding-left: 0;
+}
+.sidebar-nav li {
+  border-bottom: 1px solid transparent;
+  color: $sidebar-nav-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-small;
+}
+.sidebar-nav li.sidebar-nav-overview {
+  margin-left: 10px;
+}
+.sidebar-nav li:hover {
+  color: $sidebar-nav-hover-color;
+}
+.sidebar-nav .sidebar-nav-active {
+  border-bottom-color: $sidebar-highlight;
+  color: $sidebar-highlight;
+}
+.sidebar-nav .sidebar-nav-active:hover {
+  color: $sidebar-highlight;
+}
+.sidebar-panel {
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.sidebar-panel-active {
+  display: block;
+}

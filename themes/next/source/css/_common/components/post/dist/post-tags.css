@@ -1,0 +1,11 @@
+.post-tags {
+  margin-top: 40px;
+  text-align: center;
+}
+.post-tags a {
+  display: inline-block;
+  font-size: $font-size-smaller;
+}
+.post-tags a:not(:last-child) {
+  margin-right: 10px;
+}

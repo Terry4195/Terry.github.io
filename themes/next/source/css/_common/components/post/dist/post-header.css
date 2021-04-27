@@ -1,0 +1,73 @@
+.posts-expand .post-header {
+  font-size: $font-size-large;
+}
+.posts-expand .post-title {
+  font-size: $font-size-largest;
+  font-weight: normal;
+  margin: initial;
+  text-align: center;
+}
+.posts-expand .post-title .post-edit-link {
+  border-bottom: none;
+  color: $grey;
+  display: inline-block;
+  float: right;
+  font-size: $font-size-larger;
+  margin-left: -1.2em;
+mobile-small()
+}
+.posts-expand .post-title .post-edit-link:hover {
+  color: $sidebar-highlight;
+}
+.posts-expand .post-title-link {
+  border-bottom: none;
+  color: var(--link-color);
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.posts-expand .post-title-link::before {
+  background: var(--link-color);
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  visibility: hidden;
+  width: 100%;
+}
+.posts-expand .post-title-link:hover::before {
+  transform: scaleX(1);
+  visibility: visible;
+}
+.posts-expand .post-title-link .fa-external-link-alt {
+  font-size: $font-size-small;
+  margin-left: 5px;
+}
+.posts-expand .post-meta {
+  color: $grey-dark;
+  font-family: $font-family-posts;
+  font-size: $font-size-smallest;
+  margin: 3px 0 60px 0;
+  text-align: center;
+}
+.posts-expand .post-meta .post-description {
+  font-size: $font-size-small;
+  margin-top: 2px;
+}
+.posts-expand .post-meta time {
+  border-bottom: 1px dashed $grey-dark;
+  cursor: pointer;
+}
+.post-meta .post-meta-item + .post-meta-item::before {
+  content: '|';
+  margin: 0 0.5em;
+}
+.post-meta-divider {
+  margin: 0 0.5em;
+}
+.post-meta-item-icon {
+  margin-right: 3px;
+tablet-mobile()
+}

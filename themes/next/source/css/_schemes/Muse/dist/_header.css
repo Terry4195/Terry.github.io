@@ -1,0 +1,19 @@
+.custom-logo .site-meta-headline {
+  text-align: center;
+}
+.custom-logo .site-title {
+  color: $black-deep;
+  margin: 10px auto 0;
+}
+.custom-logo .site-title a {
+  border: 0;
+}
+.custom-logo-image {
+  background: #fff;
+  margin: 0 auto;
+  max-width: 150px;
+  padding: 5px;
+}
+.brand {
+  background: var(--btn-default-bg);
+}

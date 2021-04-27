@@ -1,0 +1,31 @@
+.followme {
+  align-items: center;
+  background: var(--card-bg-color);
+  border-left: 3px solid $red;
+  color: $grey;
+  margin: 2em 0 1em 0;
+  padding: 1em 1.5em;
+}
+.followme .social-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+tablet-mobile()
+}
+.followme .social-list .social-item {
+  margin: 0.5em 2em;
+}
+.followme .social-list .social-link {
+  border: 0;
+  display: inline-block;
+  text-align: center;
+}
+.followme .social-list .social-link .icon {
+  font-size: 1.75em;
+  height: 1.75em;
+  width: 1.75em;
+}
+.followme .social-list .social-link .label {
+  display: block;
+  font-size: 14px;
+}
