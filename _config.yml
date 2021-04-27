@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 博客
+title: Terry的小站
 subtitle: ""
 description: ""
 keywords:
@@ -42,7 +42,7 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
-future: true
+future:
 highlight:
   enable: true
   line_number: true

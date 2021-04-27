@@ -8,6 +8,7 @@
   {{ partial('_third-party/analytics/index.swig', {}, {cache: theme.cache.enable}) }}
   {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
 </head>
+<script src="/Terry.github.io/lib/jquery.3.6.0.mini.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container{%- if theme.motion.enable %} use-motion{%- endif %}">

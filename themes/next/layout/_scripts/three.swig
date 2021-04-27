@@ -1,5 +1,4 @@
 {%- if theme.three.enable %}
-  <script src="./lib/jquery.3.6.0.mini.js"></script>
   {%- set three_uri = theme.vendors.three or next_vendors('three/three.min.js') %}
   <script defer src="{{ three_uri }}"></script>
   {%- if theme.three.three_waves %}
