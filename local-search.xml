@@ -11,13 +11,31 @@
     <content type="html"><![CDATA[<h3 id="安装要使用的包"><a href="#安装要使用的包" class="headerlink" title="安装要使用的包"></a>安装要使用的包</h3><figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">npm install webpack webpack-cli -S<br>或<br>yarn add webpack webpack-cli -s<br></code></pre></div></td></tr></table></figure><hr><h3 id="如果使用全局-cli-命令，可以全局安装-webpack-cli"><a href="#如果使用全局-cli-命令，可以全局安装-webpack-cli" class="headerlink" title="如果使用全局 cli 命令，可以全局安装 webpack-cli"></a>如果使用全局 cli 命令，可以全局安装 webpack-cli</h3><figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">npm install webpack-cli -g<br>    或<br>yarn add <span class="hljs-built_in">global</span> webpack-cli<br></code></pre></div></td></tr></table></figure><hr><h3 id="在项目的根目录创建-webpack-config-js"><a href="#在项目的根目录创建-webpack-config-js" class="headerlink" title="在项目的根目录创建 webpack.config.js"></a>在项目的根目录创建 webpack.config.js</h3><figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);<br><span class="hljs-built_in">module</span>.exports = &#123;<br>  entry: <span class="hljs-string">&quot;./src/index.js&quot;</span>, <span class="hljs-comment">// String || Object 可以写单个或者多个入口文件</span><br>  output: &#123;<br>    <span class="hljs-comment">// 出口</span><br>    path: path.resolve(__dirname, <span class="hljs-string">&quot;dist&quot;</span>),<br>    filename: <span class="hljs-string">&quot;[name][hash:8].js&quot;</span>,<br>  &#125;,<br>&#125;;<br></code></pre></div></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>前端</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Html</tag>
+      
+      <tag>css</tag>
+      
+      <tag>vue</tag>
+      
+      <tag>webpack</tag>
+      
+    </tags>
     
   </entry>
   
   
   
   <entry>
-    <title>webpack基本使用</title>
+    <title>webpack</title>
     <link href="/Terry.github.io/2020/04/26/webpack/"/>
     <url>/Terry.github.io/2020/04/26/webpack/</url>
     
