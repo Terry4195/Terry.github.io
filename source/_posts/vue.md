@@ -1,6 +1,11 @@
 ---
 title: vue
+author: Terry
 date: 2021-04-26 14:20:57
+banner_img: /lib/images/vue/bg.png
+index_img: /lib/images/vue/head.png
+tags: [Html,css,vue,webpack]
+categories: 前端
 ---
 
 

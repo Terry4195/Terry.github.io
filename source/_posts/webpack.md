@@ -1,10 +1,12 @@
 ---
-title: webpack基本使用
+title: webpack
 author: Terry
 date: 2020/4/26 12:46:25
+banner_img: /lib/images/bg.png
+index_img: /lib/images/webpack/head.png
+banner_img_height: 20
 ---
 ## 安装要使用的包
-
 ```js
 npm install webpack webpack-cli -s
 	  或
@@ -31,7 +33,9 @@ yarn add global webpack-cli
    <font color=red size=4>output--></font></span>文件出口；
    <font color=red size=4>module--></font></span>模块依赖；
    <font color=red size=4>plugin--></font></span>插件配置；
+   
 ```js
+
 const path = require("path");
 module.exports = {
   entry: "./src/index.js", // String || Object 可以写单个或者多个入口文件
