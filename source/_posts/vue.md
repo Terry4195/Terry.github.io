@@ -5,10 +5,8 @@ date: 2021-04-26 14:20:57
 banner_img: /lib/images/vue/bg.png
 index_img: /lib/images/vue/head.png
 tags: [Html,css,JavaScript,vue]
-layout: true
 categories: 前端
 ---
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1716279&auto=1&height=66"></iframe>
 
 ### 初识Vue
 [官方文档](https://cn.vuejs.org/)
