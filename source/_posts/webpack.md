@@ -5,6 +5,8 @@ date: 2020/4/26 12:46:25
 banner_img: /lib/images/bg.png
 index_img: /lib/images/webpack/head.png
 banner_img_height: 20
+tags: [webpack]
+categories: 前端工具
 ---
 ## 安装要使用的包
 ```js
