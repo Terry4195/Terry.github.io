@@ -1,11 +1,10 @@
 ---
 title: vue
 author: Terry
-date: 2021-04-26 14:20:57
-banner_img: /lib/images/vue/bg.png
-index_img: /lib/images/vue/head.png
+date: 2019-10-26 20:20:57
+index_img: /lib/images/vue/webp/index.webp
 tags: [Html,css,JavaScript,vue]
-categories: 前端
+categories: web
 ---
 
 ### 初识Vue
@@ -283,3 +282,7 @@ let vm2 = new Vue({
 
 </html>
 ```
+
+### 计算属性
+
+
