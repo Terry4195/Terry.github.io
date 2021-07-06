@@ -208,7 +208,7 @@ custom_html: ""
 # 网页访问统计
 # Analysis of website visitors
 web_analytics: # 网页访问统计
-  enable: false
+  enable: true
 
   # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
   # Baidu analytics, get the string behind `hm.js?`
@@ -245,8 +245,8 @@ web_analytics: # 网页访问统计
   # LeanCloud 计数统计，可用于 PV UV 展示，如果 `web_analytics: enable` 没有开启，PV UV 展示只会查询不会增加
   # LeanCloud count statistics, which can be used for PV UV display. If `web_analytics: enable` is false, PV UV display will only query and not increase
   leancloud:
-    app_id:
-    app_key:
+    app_id: 7onSiWGn83yrK5fHBrmTTAkr-gzGzoHsz
+    app_key: 7fE71dvruDDM1lRkcNCoInWi
     # REST API 服务器地址，国际版不填
     # Only the Chinese mainland users need to set
     server_url:
@@ -381,7 +381,7 @@ footer:
     # 统计数据来源，使用 leancloud 需要设置 `web_analytics: leancloud` 中的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
     # Data source. If use leancloud, you need to set the parameter in `web_analytics: leancloud`
     # Options: busuanzi | leancloud
-    source: "busuanzi"
+    source: "leancloud"
 
     # 页面显示的文本，{}是数字的占位符（必须包含)，下同
     # Displayed text, {} is a placeholder for numbers (must be included), the same below
@@ -619,11 +619,11 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo
-    type: disqus
+    type: valine
 
 #---------------------------
 # 评论插件
@@ -684,8 +684,8 @@ gitalk:
 # Based on LeanCloud
 # See: https://valine.js.org/configuration.html
 valine:
-  appid:
-  appkey:
+  appid: W0qP2ClCDOdq0x5srcQm6kkx-gzGzoHsz
+  appkey: yNNeqliKS8Dvx85nJTGbmsJY
   placeholder: 说点什么
   path: window.location.pathname
   avatar: retro
