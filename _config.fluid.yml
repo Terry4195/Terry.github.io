@@ -408,7 +408,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /lib/images/bg/webp/bg.webp
+  banner_img: http://qwlbyw52x.hn-bkt.clouddn.com/bg/bg.webp
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -755,7 +755,7 @@ twikoo:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /lib/images/bg/webp/archive.webp
+  banner_img: http://qwlbyw52x.hn-bkt.clouddn.com/bg/archive.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -766,7 +766,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /lib/images/bg/webp/category.webp
+  banner_img: http://qwlbyw52x.hn-bkt.clouddn.com/bg/category.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:

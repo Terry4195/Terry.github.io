@@ -2,7 +2,7 @@
 title: es6
 author: Terry
 date: 2021-04-26 19:20:57
-index_img: /lib/images/es6/webp/index.webp
+index_img: http://qwlbyw52x.hn-bkt.clouddn.com/es6/index.webp
 banner_img_height: 40
 layout: true
 tags: [JavaScript, es6]

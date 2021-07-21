@@ -2,7 +2,7 @@
 title: vue
 author: Terry
 date: 2019-10-26 20:20:57
-index_img: /lib/images/vue/webp/index.webp
+index_img: http://qwlbyw52x.hn-bkt.clouddn.com/vue/index.webp
 tags: [Html, css, JavaScript, vue]
 categories: web
 ---

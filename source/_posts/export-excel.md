@@ -2,7 +2,7 @@
 title: web导出excel
 date: 2021-06-11 15:31:50
 tags: ["javascript"]
-index_img: /lib/images/excel/webp/excel.webp
+index_img: http://qwlbyw52x.hn-bkt.clouddn.com/excel/excel.webp
 ---
 
 ### web 端导出 table 中的数据，将数据导出为 excel 文件是后台管理系统中常见的需求，导出的方法也有很多中，下面给出几个常用的方法

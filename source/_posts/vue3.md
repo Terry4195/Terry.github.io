@@ -1,7 +1,7 @@
 ---
 title: vue3
 date: 2021-05-31 10:36:04
-index_img: /lib/images/vue/webp/index.webp
+index_img: http://qwlbyw52x.hn-bkt.clouddn.com/vue3/index.webp
 tags: [vue]
 categories: web
 ---
@@ -65,11 +65,11 @@ const vm = app.mount("元素ID");
 <div class="flex">
     <div>
          <h4>vue2：</h4>
-        <image src="/blog/lib/images/vue3/webp/lifecycle2.webp">
+        <image src="http://qwlbyw52x.hn-bkt.clouddn.com/vue3/lifecycle2.webp">
     </div>
     <div>
         <h4>vue3：</h4>
-        <image src="/blog/lib/images/vue3/webp/lifecycle3.webp">
+        <image src="http://qwlbyw52x.hn-bkt.clouddn.com/vue3/lifecycle3.webp">
     </div>
 </div>
 <div>

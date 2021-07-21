@@ -1,7 +1,7 @@
 ---
 title: reduce
 date: 2020-03-14 19:54:44
-index_img: /lib/images/javascript/webp/index.webp
+index_img: http://qwlbyw52x.hn-bkt.clouddn.com/javascript/index.webp 
 tags: [JavaScript, es5]
 categories: JavaScript
 ---
