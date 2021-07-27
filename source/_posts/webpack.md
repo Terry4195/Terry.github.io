@@ -2,8 +2,8 @@
 title: webpack
 author: Terry
 date: 2020-01-05 15:54:44
-index_img: http://qwlbyw52x.hn-bkt.clouddn.com/webpack/index.webp
-banner_img_height: 20
+index_img: https://qiniu.zhaoxinchuan.cn/webpack/index.webp
+banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 tags: [webpack]
 categories: 前端工具
 ---

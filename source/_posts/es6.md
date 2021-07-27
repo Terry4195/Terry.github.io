@@ -2,8 +2,8 @@
 title: es6
 author: Terry
 date: 2021-04-26 19:20:57
-index_img: http://qwlbyw52x.hn-bkt.clouddn.com/es6/index.webp
-banner_img_height: 40
+index_img: https://qiniu.zhaoxinchuan.cn/es6/index.webp
+banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 layout: true
 tags: [JavaScript, es6]
 categories: JavaScript

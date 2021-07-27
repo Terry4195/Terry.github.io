@@ -1,7 +1,8 @@
 ---
 title: linux下部署nginx
 date: 2021-06-02 14:34:13
-index_img:  http://qwlbyw52x.hn-bkt.clouddn.com/nginx/index.webp
+index_img:  https://qiniu.zhaoxinchuan.cn/nginx/index.webp
+banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 tags:
 ---
 

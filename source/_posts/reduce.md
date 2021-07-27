@@ -1,7 +1,8 @@
 ---
 title: reduce
 date: 2020-03-14 19:54:44
-index_img: http://qwlbyw52x.hn-bkt.clouddn.com/javascript/index.webp 
+index_img: https://qiniu.zhaoxinchuan.cn/javascript/index.webp 
+banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 tags: [JavaScript, es5]
 categories: JavaScript
 ---

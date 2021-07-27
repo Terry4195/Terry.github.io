@@ -1,7 +1,8 @@
 ---
 title: mysql
 date: 2021-07-05 10:32:48
-index_img: http://qwlbyw52x.hn-bkt.clouddn.com/mysql/index.webp
+index_img: https://qiniu.zhaoxinchuan.cn/mysql/index.webp
+banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 tags: [数据库安装]
 description: mysql在windows中安装教程
 ---
@@ -11,7 +12,7 @@ description: mysql在windows中安装教程
 提取码：come
 
 ## 2.解压到本地目录
-![解压目录](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/1.webp)
+![解压目录](https://qiniu.zhaoxinchuan.cn/mysql/1.webp)
 *由于使用的免安装版，所以在解压目录中并没有my.ini配置文件。这里我们手动创建my.ini文件,复制下方配置*
 ```
 # 
@@ -64,12 +65,12 @@ max_allowed_packet=300M
 ## 3.命令行启动mysql服务
 * *由于mysql没有配置环境变量，所以输入mysql后，提示无法识别*
 1. 此电脑，右键属性
-    ![属性](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/2.webp)
+    ![属性](https://qiniu.zhaoxinchuan.cn/mysql/2.webp)
 
 2. 高级系统设置-环境变量-系统变量-Path(编辑-新建)-mysql安装目录-一路确定，在输入mysql就不会提示无法识别了
-    ![高级系统设置](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/3.webp)
-    ![环境变量](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/4.webp)
-    ![新增变量](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/5.webp)
+    ![高级系统设置](https://qiniu.zhaoxinchuan.cn/mysql/3.webp)
+    ![环境变量](https://qiniu.zhaoxinchuan.cn/mysql/4.webp)
+    ![新增变量](https://qiniu.zhaoxinchuan.cn/mysql/5.webp)
 
 3. 安装mysqld服务
     ```
@@ -82,7 +83,7 @@ max_allowed_packet=300M
     mysqld --initialize --console
     ```
     **初始化成功后会产生一个随机密码，请记住，待会儿会用到**
-    ![初始化mysql](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/6.webp)
+    ![初始化mysql](https://qiniu.zhaoxinchuan.cn/mysql/6.webp)
 
 5. 启动mysql
     ```
@@ -100,12 +101,12 @@ max_allowed_packet=300M
    ```
    * root:初始化的默认名称
     回车后会输入登录密码(初始化产生的随机密码)
-    ![登录](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/7.webp)
+    ![登录](https://qiniu.zhaoxinchuan.cn/mysql/7.webp)
     ```
     # set password for 用户名(默认为root)@localhost = password('新密码');
     set password for root@localhost = password('新密码');
     ```
-    ![修改成功](http://qwlbyw52x.hn-bkt.clouddn.com/mysql/8.webp)
+    ![修改成功](https://qiniu.zhaoxinchuan.cn/mysql/8.webp)
 
     <font color=red>**有时候，在命令行会出现各种各样的问题，所以尽量使用 以管理员身份打开**</font>
 
