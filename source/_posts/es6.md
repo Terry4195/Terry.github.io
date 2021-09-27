@@ -2,7 +2,7 @@
 title: es6
 author: Terry
 date: 2021-04-26 19:20:57
-index_img: https://qiniu.zhaoxinchuan.cn/es6/index.webp
+index_img: /lib/images/es6/webp/index.webp
 banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 layout: true
 tags: [JavaScript, es6]
