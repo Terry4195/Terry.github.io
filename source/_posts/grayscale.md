@@ -5,6 +5,7 @@ index_img: https://qiniu.zhaoxinchuan.cn/javascript/index.webp
 banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 tags: [javascript, 插件]
 categories: JavaScript
+description: 网站快速置灰插件
 ---
 
 > 我们经常会在一些网站中看到这样的效果,比如经常使用的B站,当某一个人逝世或者全国哀悼日的时候,会将网站所有模块置灰以示哀悼！

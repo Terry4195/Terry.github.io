@@ -4,6 +4,7 @@ date: 2021-08-02 16:37:26
 tags: [javascript]
 index_img: https://qiniu.zhaoxinchuan.cn/indexedDB/index.webp
 banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
+description: IndexedDB 就是浏览器提供的本地数据库，它可以被网页脚本创建和操作。
 ---
 # IndexedDB 入门教程
 

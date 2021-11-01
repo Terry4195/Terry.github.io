@@ -5,7 +5,7 @@ date: 2019-10-26 20:20:57
 index_img: https://qiniu.zhaoxinchuan.cn/vue/index.webp
 banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 tags: [Html, css, JavaScript, vue]
-categories: web
+categories: 框架
 ---
 
 ### 初识 Vue

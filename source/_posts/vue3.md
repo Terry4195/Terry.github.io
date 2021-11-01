@@ -4,7 +4,7 @@ date: 2021-05-31 10:36:04
 index_img: https://qiniu.zhaoxinchuan.cn/vue3/index.webp
 banner_img: https://qiniu.zhaoxinchuan.cn/bg/category.webp
 tags: [vue]
-categories: web
+categories: 框架
 ---
 ### 初识vue3
 #### hello world
