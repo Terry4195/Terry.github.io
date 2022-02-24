@@ -1,0 +1,1064 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;light&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/favicon.png">
+  <link rel="icon" href="/blog/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Terry">
+  <meta name="keywords" content="">
+  
+  <title>CSS3网页按钮Button样式 - Terry的小站</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/blog/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/srcery.min.css" />
+    
+  
+
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"1.116.219.98","root":"/blog/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❤","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"W0qP2ClCDOdq0x5srcQm6kkx-gzGzoHsz","app_key":"yNNeqliKS8Dvx85nJTGbmsJY","server_url":null}}};
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 60vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/blog/">&nbsp;<strong>Terry的小站</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true style="background: url('https://qiniu.zhaoxinchuan.cn/bg/archive.webp') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="CSS3网页按钮Button样式">
+              
+            </span>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <div class="container nopadding-x-md">
+      <div class="py-5" id="board"
+        >
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-10 m-auto">
+              
+
+<article class="page-content">
+  <!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<style type="text/css">
+body{ 
+background: #f5faff;
+}
+.demo_con{
+width: 960px;
+margin:40px auto 0;
+}
+.button{
+width: 140px;
+line-height: 38px;
+text-align: center;
+font-weight: bold;
+color: #fff;
+text-shadow:1px 1px 1px #333;
+border-radius: 5px;
+margin:0 20px 20px 0;
+position: relative;
+overflow: hidden;
+}
+.button:nth-child(6n){
+margin-right: 0;
+}
+.button.gray{
+color: #8c96a0;
+text-shadow:1px 1px 1px #fff;
+border:1px solid #dce1e6;
+box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+background: linear-gradient(top,#f2f3f7,#e4e8ec);
+}
+.button.black{
+border:1px solid #333;
+box-shadow: 0 1px 2px #8b8b8b inset,0 -1px 0 #3d3d3d inset,0 -2px 3px #8b8b8b inset;
+background: -webkit-linear-gradient(top,#656565,#4c4c4c);
+background: -moz-linear-gradient(top,#656565,#4a4a4a);
+background: linear-gradient(top,#656565,#4a4a4a);
+}
+.button.red{
+border:1px solid #b42323;
+box-shadow: 0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;
+background: -webkit-linear-gradient(top,#d53939,#b92929);
+background: -moz-linear-gradient(top,#d53939,#b92929);
+background: linear-gradient(top,#d53939,#b92929);
+}
+.button.yellow{
+border:1px solid #d2a000;
+box-shadow: 0 1px 2px #fedd71 inset,0 -1px 0 #a38b39 inset,0 -2px 3px #fedd71 inset;
+background: -webkit-linear-gradient(top,#fece34,#d8a605);
+background: -moz-linear-gradient(top,#fece34,#d8a605);
+background: linear-gradient(top,#fece34,#d8a605);
+}
+.button.green{
+border:1px solid #64c878;
+box-shadow: 0 1px 2px #b9ecc4 inset,0 -1px 0 #6c9f76 inset,0 -2px 3px #b9ecc4 inset;
+background: -webkit-linear-gradient(top,#90dfa2,#84d494);
+background: -moz-linear-gradient(top,#90dfa2,#84d494);
+background: linear-gradient(top,#90dfa2,#84d494);
+}
+.button.blue{
+border:1px solid #1e7db9;
+box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+background: linear-gradient(top,#42a4e0,#2e88c0);
+}
+.round,
+    .side,
+    .tags{
+padding-right: 30px;
+}
+.round:after{
+position: absolute;
+display: inline-block;
+content: "\003c";
+top:50%;
+right:10px;
+margin-top: -10px;
+width: 17px;
+height: 20px;
+padding-left: 3px;
+line-height:18px;
+font-size: 10px;
+font-weight: normal;
+border-radius: 10px;
+text-shadow:-2px 0 1px #333;
+-webkit-transform:rotate(-90deg);
+-moz-transform:rotate(-90deg); 
+transform:rotate(-90deg);
+}
+.gray.round:after{
+box-shadow:1px 0 1px rgba(255,255,255,1) inset,1px 0 1px rgba(0,0,0,.2);
+background:-webkit-linear-gradient(top,#dce1e6,#dde2e7);
+background:-moz-linear-gradient(top,#dce1e6,#dde2e7);
+background:linear-gradient(top,#dce1e6,#dde2e7);
+text-shadow:-2px 0 1px #fff;
+}
+.black.round:after{
+box-shadow:1px 0 1px rgba(255,255,255,.5) inset,1px 0 1px rgba(0,0,0,.9);
+background:-webkit-linear-gradient(top,#333,#454545);
+background:-moz-linear-gradient(top,#333,#454545);
+background:linear-gradient(top,#333,#454545);
+}
+.red.round:after{
+box-shadow:1px 0 1px rgba(255,255,255,.6) inset,1px 0 1px rgba(130,25,25,.9);
+background:-webkit-linear-gradient(top,#b12222,#b42323);
+background:-moz-linear-gradient(top,#b12222,#b42323);
+background:linear-gradient(top,#b12222,#b42323);
+}
+.yellow.round:after{
+box-shadow:1px 0 1px rgba(255,255,255,.8) inset,1px 0 1px rgba(148,131,4,.9);
+background:-webkit-linear-gradient(top,#cf9d00,#d2a000);
+background:-moz-linear-gradient(top,#cf9d00,#d2a000);
+background:linear-gradient(top,#cf9d00,#d2a000);                         
+}
+.green.round:after{
+box-shadow:1px 0 1px rgba(255,255,255,.8) inset,1px 0 1px rgba(51,126,66,.9);
+background:-webkit-linear-gradient(top,#64c878,#6dcb80);
+background:-moz-linear-gradient(top,#64c878,#6dcb80);
+background:linear-gradient(top,#64c878,#6dcb80);                         
+}
+.blue.round:after{
+box-shadow:1px 0 1px rgba(255,255,255,.8) inset,1px 0 1px rgba(18,85,128,.9);
+background:-webkit-linear-gradient(top,#1e7db9,#2b85bd);
+background:-moz-linear-gradient(top,#1e7db9,#2b85bd);
+background:linear-gradient(top,#1e7db9,#2b85bd);                         
+}
+.side:after{
+position: absolute;
+display: inline-block;
+content: "\00bb";
+top:3px;
+right:-4px;
+width: 38px;
+height:30px;
+font-weight: normal;
+line-height: 26px;
+border-radius:0 0 5px 5px;
+text-shadow:-2px 0 1px #333;
+-webkit-transform:rotate(-90deg);
+-moz-transform:rotate(-90deg);
+transform:rotate(-90deg);
+}
+.gray.side:after{
+text-shadow:-2px 0 1px #fff;
+border-top: 1px solid #d4d4d4;
+box-shadow:-2px 0 1px #eceef1 inset;
+background:-webkit-linear-gradient(right,#e1e6ea,#f2f2f6 60%);
+background:-moz-linear-gradient(right,#e1e6ea,#f2f2f6 60%);
+background:linear-gradient(right,#e1e6ea,#f2f2f6 60%); 
+}
+.black.side:after{
+border-top: 1px solid #222;
+box-shadow:-2px 0 1px #606060 inset;
+background:-webkit-linear-gradient(right,#373737,#555 60%);
+background:-moz-linear-gradient(right,#373737,#555 60%);
+background:linear-gradient(right,#373737,#555 60%); 
+}
+.red.side:after{
+border-top: 1px solid #aa1e1e;
+box-shadow:-2px 0 1px #c75959 inset;
+background:-webkit-linear-gradient(right,#b82929,#d73f3f 60%);
+background:-moz-linear-gradient(top,#b82929,#d73f3f 60%);
+background:linear-gradient(top,#b82929,#d73f3f 60%); 
+}
+.yellow.side:after{
+border-top: 1px solid #ba8f06;
+box-shadow:-2px 0 1px #deb842 inset;
+background:-webkit-linear-gradient(right,#d5a406,#fdc40b 60%);
+background:-moz-linear-gradient(right,#d5a406,#fdc40b 60%);
+background:linear-gradient(right,#d5a406,#fdc40b 60%); 
+}
+.green.side:after{
+border-top: 1px solid #53b567;
+box-shadow:-2px 0 1px #8ad599 inset;
+background:-webkit-linear-gradient(right,#69ca7c,#91e5a5 60%);
+background:-moz-linear-gradient(right,#69ca7c,#91e5a5 60%);
+background:linear-gradient(right,#69ca7c,#91e5a5 60%); 
+}
+.blue.side:after{
+border-top: 1px solid #1971a8;
+box-shadow:-2px 0 1px #559dca inset;
+background:-webkit-linear-gradient(right,#2482bd,#3fa2e0 60%);
+background:-moz-linear-gradient(right,#2482bd,#3fa2e0 60%);
+background:linear-gradient(right,#2482bd,#3fa2e0 60%); 
+}
+.tags:after{
+font-weight: normal;
+position: absolute;
+display: inline-block;
+content: "FREE";
+top:-3px;
+right: -33px;
+color: #fff;
+text-shadow:none;
+width: 85px;
+height:25px;
+line-height: 28px;
+-webkit-transform:rotate(45deg) scale(.7,.7);
+-moz-transform:rotate(45deg) scale(.7,.7);
+transform:rotate(45deg) scale(.7,.7);
+}
+.gray.tags:after{
+background: #8c96a0;
+border:2px solid #fff;    
+}
+.black.tags:after{
+background: #333;
+border:2px solid #777;    
+}
+.red.tags:after{
+background: #b42323;
+border:2px solid #df4141;    
+}
+.yellow.tags:after{
+background: #d2a000;
+border:2px solid #fcc100;    
+}
+.green.tags:after{
+background: #64c878;
+border:2px solid #9bebac;    
+}
+.blue.tags:after{
+background: #1e7db9;
+border:2px solid #54b1e9;    
+}
+.button.rarrow,
+    .button.larrow{
+overflow:visible;
+}
+.rarrow:after,    
+    .rarrow:before,
+    .larrow:after,    
+    .larrow:before{
+position:absolute;
+content: "";
+display: block;
+width: 28px;
+height: 28px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+.rarrow:before{
+width: 27px;
+height: 27px;
+top: 6px;
+right: -13px;
+clip: rect(auto auto 26px 2px);
+}
+.rarrow:after{
+top: 6px;
+right: -12px;
+clip: rect(auto auto 26px 2px);
+}
+.gray.rarrow:before{
+background: #d6dbe0;
+}
+.gray.rarrow:after{
+box-shadow: 0 1px 0 #fff inset,-1px 0 0 #b7babd inset;
+background:-webkit-linear-gradient(top left,#f2f3f7,#e4e8ec);
+background:-moz-linear-gradient(top left,#f2f3f7,#e4e8ec);
+background:linear-gradient(top left,#f2f3f7,#e4e8ec);
+}
+.black.rarrow:before{
+background: #333;
+}
+.black.rarrow:after{
+box-shadow: 0 1px 0 #8B8B8B inset,-1px 0 0 #3d3d3d inset,-2px 0 0 #8B8B8B inset;
+background:-webkit-linear-gradient(top left,#656565,#4C4C4C);
+background:-moz-linear-gradient(top left,#656565,#4C4C4C);
+background:linear-gradient(top left,#656565,#4C4C4C);
+}
+.red.rarrow:before{
+background: #B42323;
+}
+.red.rarrow:after{
+box-shadow: 0 1px 0 #E99494 inset,-1px 0 0 #954B4B inset,-2px 0 0 #E99494 inset;
+background:-webkit-linear-gradient(top left,#D53939,#B92929);
+background:-moz-linear-gradient(top left,#D53939,#B92929);
+background:linear-gradient(top left,#D53939,#B92929);
+}
+.yellow.rarrow:before{
+background: #D2A000;
+}
+.yellow.rarrow:after{
+box-shadow: 0 1px 0 #FEDD71 inset,-1px 0 0 #A38B39 inset,-2px 0 0 #FEDD71 inset;
+background:-webkit-linear-gradient(top left,#FECE34,#D8A605);
+background:-moz-linear-gradient(top left,#FECE34,#D8A605);
+background:linear-gradient(top left,#FECE34,#D8A605);
+}
+.green.rarrow:before{
+background: #64C878;
+}
+.green.rarrow:after{
+box-shadow: 0 1px 0 #B9ECC4 inset,-1px 0 0 #6C9F76 inset,-2px 0 0 #B9ECC4 inset;
+background:-webkit-linear-gradient(top left,#90DFA2,#84D494);
+background:-moz-linear-gradient(top left,#90DFA2,#84D494);
+background:linear-gradient(top left,#90DFA2,#84D494);
+}
+.blue.rarrow:before{
+background: #1E7DB9;
+}
+.blue.rarrow:after{
+box-shadow: 0 1px 0 #8FCAEE inset,-1px 0 0 #497897 inset,-2px 0 0 #8FCAEE inset;
+background:-webkit-linear-gradient(top left,#42A4E0,#2E88C0);
+background:-moz-linear-gradient(top left,#42A4E0,#2E88C0);
+background:linear-gradient(top left,#42A4E0,#2E88C0);
+}
+.larrow:before{
+top: 6px;
+left: -13px;
+width: 27px;
+height: 27px;
+clip: rect(2px 26px auto auto);
+}
+.larrow:after{
+top: 6px;
+left: -12px;
+clip: rect(2px 26px auto auto);
+}
+.gray.larrow:before{
+background: #d6dbe0;
+}
+.gray.larrow:after{
+box-shadow: 0 -1px 0 #b7babd inset,1px 0 0 #fff inset;
+background:-webkit-linear-gradient(top left,#f2f3f7,#e4e8ec);
+background:-moz-linear-gradient(top left,#f2f3f7,#e4e8ec);
+background:linear-gradient(top left,#f2f3f7,#e4e8ec);
+}
+.black.larrow:before{
+background: #333;
+}
+.black.larrow:after{
+box-shadow: 0 -1px 0 #3d3d3d inset,0 -2px 0 #8B8B8B inset,1px 0 0 #8B8B8B inset;
+background:-webkit-linear-gradient(top left,#656565,#4C4C4C);
+background:-moz-linear-gradient(top left,#656565,#4C4C4C);
+background:linear-gradient(top left,#656565,#4C4C4C);
+}
+.red.larrow:before{
+background: #B42323;
+}
+.red.larrow:after{
+box-shadow: 0 -1px 0 #954B4B inset,0 -2px 0 #E99494 inset,1px 0 0 #E99494 inset;
+background:-webkit-linear-gradient(top left,#D53939,#B92929);
+background:-moz-linear-gradient(top left,#D53939,#B92929);
+background:linear-gradient(top left,#D53939,#B92929);
+}
+.yellow.larrow:before{
+background: #D2A000;
+}
+.yellow.larrow:after{
+box-shadow: 0 -1px 0 #A38B39 inset,0 -2px 0 #FEDD71 inset,1px 0 0 #FEDD71 inset;
+background:-webkit-linear-gradient(top left,#FECE34,#D8A605);
+background:-moz-linear-gradient(top left,#FECE34,#D8A605);
+background:linear-gradient(top left,#FECE34,#D8A605);
+}
+.green.larrow:before{
+background: #64C878;
+}
+.green.larrow:after{
+box-shadow: 0 -1px 0 #6C9F76 inset,0 -2px 0 #B9ECC4 inset,1px 0 0 #B9ECC4 inset;
+background:-webkit-linear-gradient(top left,#90DFA2,#84D494);
+background:-moz-linear-gradient(top left,#90DFA2,#84D494);
+background:linear-gradient(top left,#90DFA2,#84D494);
+}
+.blue.larrow:before{
+background: #1E7DB9;
+}
+.blue.larrow:after{
+box-shadow: 0 -1px 0 #497897 inset,0 -2px 0 #8FCAEE inset,1px 0 0 #8FCAEE inset;
+background:-webkit-linear-gradient(top left,#42A4E0,#2E88C0);
+background:-moz-linear-gradient(top left,#42A4E0,#2E88C0);
+background:linear-gradient(top left,#42A4E0,#2E88C0);
+}
+.gray:hover{
+background: -webkit-linear-gradient(top,#fefefe,#ebeced);
+background: -moz-linear-gradient(top,#f2f3f7,#ebeced);
+background: linear-gradient(top,#f2f3f7,#ebeced);
+}
+.black:hover{
+background: -webkit-linear-gradient(top,#818181,#575757);
+background: -moz-linear-gradient(top,#818181,#575757);
+background: linear-gradient(top,#818181,#575757);
+}
+.red:hover{
+background: -webkit-linear-gradient(top,#eb6f6f,#c83c3c);
+background: -moz-linear-gradient(top,#eb6f6f,#c83c3c);
+background: linear-gradient(top,#eb6f6f,#c83c3c);
+}
+.yellow:hover{
+background: -webkit-linear-gradient(top,#ffd859,#e3bb38);
+background: -moz-linear-gradient(top,#ffd859,#e3bb38);
+background: linear-gradient(top,#ffd859,#e3bb38);
+}
+.green:hover{
+background: -webkit-linear-gradient(top,#aaebb9,#82d392);
+background: -moz-linear-gradient(top,#aaebb9,#82d392);
+background: linear-gradient(top,#aaebb9,#82d392);
+}
+.blue:hover{
+background: -webkit-linear-gradient(top,#70bfef,#4097ce);
+background: -moz-linear-gradient(top,#70bfef,#4097ce);
+background: linear-gradient(top,#70bfef,#4097ce);
+}
+.gray:active{
+top:1px;
+box-shadow: 0 1px 3px #a8abae inset,0 3px 0 #fff;
+background: -webkit-linear-gradient(top,#e4e8ec,#e4e8ec);
+background: -moz-linear-gradient(top,#e4e8ec,#e4e8ec);
+background: linear-gradient(top,#e4e8ec,#e4e8ec);
+}
+.black:active{
+top:1px;
+box-shadow: 0 1px 3px #111 inset,0 3px 0 #fff;
+background: -webkit-linear-gradient(top,#424242,#575757);
+background: -moz-linear-gradient(top,#424242,#575757);
+background: linear-gradient(top,#424242,#575757);
+}
+.red:active{
+top:1px;
+box-shadow: 0 1px 3px #5b0505 inset,0 3px 0 #fff;
+background: -webkit-linear-gradient(top,#b11a1a,#bf2626);
+background: -moz-linear-gradient(top,#b11a1a,#bf2626);
+background: linear-gradient(top,#b11a1a,#bf2626);
+}
+.yellow:active{
+top:1px;
+box-shadow: 0 1px 3px #816b1f inset,0 3px 0 #fff;
+background: -webkit-linear-gradient(top,#d3a203,#dba907);
+background: -moz-linear-gradient(top,#d3a203,#dba907);
+background: linear-gradient(top,#d3a203,#dba907);
+}
+.green:active{
+top:1px;
+box-shadow: 0 1px 3px #4d7254 inset,0 3px 0 #fff;
+background: -webkit-linear-gradient(top,#5eac6e,#72b37e);
+background: -moz-linear-gradient(top,#5eac6e,#72b37e);
+background: linear-gradient(top,#5eac6e,#72b37e);
+}
+.blue:active{
+top:1px;
+box-shadow: 0 1px 3px #114566 inset,0 3px 0 #fff;
+background: -webkit-linear-gradient(top,#1a71a8,#1976b1);
+background: -moz-linear-gradient(top,#1a71a8,#1976b1);
+background: linear-gradient(top,#1a71a8,#1976b1);
+}
+.gray.side:hover:after{
+background:-webkit-linear-gradient(right,#e7ebee,#f8f8f8 60%);
+background:-moz-linear-gradient(right,#e7ebee,#f8f8f8 60%);
+background:linear-gradient(right,#e7ebee,#f8f8f8 60%);
+}
+.black.side:hover:after{
+background:-webkit-linear-gradient(right,#555,#6f6f6f 60%);
+background:-moz-linear-gradient(right,#555,#6f6f6f 60%);
+background:linear-gradient(right,#555,#6f6f6f 60%); 
+}
+.red.side:hover:after{
+background:-webkit-linear-gradient(right,#c43333,#dc4949 60%);
+background:-moz-linear-gradient(right,#c43333,#dc4949 60%);
+background:linear-gradient(right,#c43333,#dc4949 60%); 
+}
+.yellow.side:hover:after{
+background:-webkit-linear-gradient(right,#e1b21a,#fbc71d 60%);
+background:-moz-linear-gradient(right,#e1b21a,#fbc71d 60%);
+background:linear-gradient(right,#e1b21a,#fbc71d 60%); 
+}
+.green.side:hover:after{
+background:-webkit-linear-gradient(right,#85da95,#94e0a5 60%);
+background:-moz-linear-gradient(right,#85da95,#94e0a5 60%);
+background:linear-gradient(right,#85da95,#94e0a5 60%); 
+}
+.blue.side:hover:after{
+background:-webkit-linear-gradient(right,#338fc8,#56b2eb 60%);
+background:-moz-linear-gradient(right,#338fc8,#56b2eb 60%);
+background:linear-gradient(right,#338fc8,#56b2eb 60%); 
+}
+.gray.side:active:after{
+top:4px;
+border-top: 1px solid #9fa6ab;
+box-shadow:-1px 0 1px #a8abae inset;
+background:-webkit-linear-gradient(right,#e4e8ec,#e4e8ec 60%);
+background:-moz-linear-gradient(right,#e4e8ec,#e4e8ec 60%);
+background:linear-gradient(right,#e4e8ec,#e4e8ec 60%); 
+}
+.black.side:active:after{
+box-shadow:-1px 0 1px #111 inset;
+background:-webkit-linear-gradient(right,#414040,#4d4c4c 60%);
+background:-moz-linear-gradient(right,#414040,#4d4c4c 60%);
+background:linear-gradient(right,#414040,#4d4c4c 60%); 
+}
+.red.side:active:after{
+box-shadow:-1px 0 1px #4b0707 inset;
+background:-webkit-linear-gradient(right,#b11a1a,#b11a1a 60%);
+background:-moz-linear-gradient(right,#b11a1a,#b11a1a 60%);
+background:linear-gradient(right,#b11a1a,#b11a1a 60%); 
+}
+.yellow.side:active:after{
+box-shadow:-1px 0 1px #816b1f inset;
+background:-webkit-linear-gradient(right,#d3a203,#dba907 60%);
+background:-moz-linear-gradient(right,#d3a203,#dba907 60%);
+background:linear-gradient(right,#d3a203,#dba907 60%); 
+}
+.green.side:active:after{
+box-shadow:-1px 0 1px #33663d inset;
+background:-webkit-linear-gradient(right,#63a870,#72b37e 60%);
+background:-moz-linear-gradient(right,#63a870,#72b37e 60%);
+background:linear-gradient(right,#63a870,#72b37e 60%); 
+}
+.blue.side:active:after{
+box-shadow:-1px 0 1px #114566 inset;
+background:-webkit-linear-gradient(right,#1a71a8,#1976b1 60%);
+background:-moz-linear-gradient(right,#1a71a8,#1976b1 60%);
+background:linear-gradient(right,#1a71a8,#1976b1 60%); 
+}
+.gray.rarrow:hover:after,
+    .gray.rarrow:hover:after{
+background:-webkit-linear-gradient(top left,#fefefe,#ebeced);
+background:-moz-linear-gradient(top left,#fefefe,#ebeced);
+background:linear-gradient(top left,#fefefe,#ebeced);
+}
+.black.rarrow:hover:after,
+    .black.larrow:hover:after{
+background:-webkit-linear-gradient(top left,#818181,#575757);
+background:-moz-linear-gradient(top left,#818181,#575757);
+background:linear-gradient(top left,#818181,#575757);
+}
+.red.rarrow:hover:after,
+    .red.larrow:hover:after{
+background:-webkit-linear-gradient(top left,#eb6f6f,#c83c3c);
+background:-moz-linear-gradient(top left,#eb6f6f,#c83c3c);
+background:linear-gradient(top left,#eb6f6f,#c83c3c);
+}
+.yellow.rarrow:hover:after,
+    .yellow.larrow:hover:after{
+background:-webkit-linear-gradient(top left,#ffd859,#e3bb38);
+background:-moz-linear-gradient(top left,#ffd859,#e3bb38);
+background:linear-gradient(top left,#ffd859,#e3bb38);
+}
+.green.rarrow:hover:after,
+    .green.larrow:hover:after{
+background:-webkit-linear-gradient(top left,#aaebb9,#82d392);
+background:-moz-linear-gradient(top left,#aaebb9,#82d392);
+background:linear-gradient(top left,#aaebb9,#82d392);
+}
+.blue.rarrow:hover:after,
+    .blue.larrow:hover:after{
+background:-webkit-linear-gradient(top left,#70bfef,#4097ce);
+background:-moz-linear-gradient(top left,#70bfef,#4097ce);
+background:linear-gradient(top left,#70bfef,#4097ce);
+}
+.gray.rarrow:active:after,
+    .gray.larrow:active:after{
+background:-webkit-linear-gradient(top left,#e4e8ec,#e4e8ec);
+background:-moz-linear-gradient(top left,#e4e8ec,#e4e8ec);
+background:linear-gradient(top left,#e4e8ec,#e4e8ec);
+}
+.black.rarrow:active:after,
+    .black.larrow:active:after{
+background:-webkit-linear-gradient(top left,#424242,#575757);
+background:-moz-linear-gradient(top left,#424242,#575757);
+background:linear-gradient(top left,#424242,#575757);
+}
+.red.rarrow:active:after,
+    .red.larrow:active:after{
+background:-webkit-linear-gradient(top left,#b11a1a,#bf2626);
+background:-moz-linear-gradient(top left,#b11a1a,#bf2626);
+background:linear-gradient(top left,#b11a1a,#bf2626);
+}
+.yellow.rarrow:active:after,
+    .yellow.larrow:active:after{
+background:-webkit-linear-gradient(top left,#d3a203,#dba907);
+background:-moz-linear-gradient(top left,#d3a203,#dba907);
+background:linear-gradient(top left,#d3a203,#dba907);
+}
+.green.rarrow:active:after,
+    .green.larrow:active:after{
+background:-webkit-linear-gradient(top left,#63a870,#72b37e);
+background:-moz-linear-gradient(top left,#63a870,#72b37e);
+background:linear-gradient(top left,#63a870,#72b37e);
+}
+.blue.rarrow:active:after,
+    .blue.larrow:active:after{
+background:-webkit-linear-gradient(top left,#1a71a8,#1976b1);
+background:-moz-linear-gradient(top left,#1a71a8,#1976b1);
+background:linear-gradient(top left,#1a71a8,#1976b1);
+}
+.gray.rarrow:active:after{
+box-shadow: 0 1px 0 #b7babd inset,-1px 0 0 #b7babd inset;
+}
+.gray.larrow:active:after{
+box-shadow: 0 -1px 0 #b7babd inset,1px 0 0 #b7babd inset;
+}
+.black.rarrow:active:after{
+box-shadow: 0 1px 0 #333 inset,-1px 0 0 #333 inset;
+}
+.black.larrow:active:after{
+box-shadow: 0 -1px 0 #333 inset,1px 0 0 #333 inset;
+}
+.red.rarrow:active:after{
+box-shadow: 0 1px 0 #640909 inset,-1px 0 0 #640909 inset;
+}
+.red.larrow:active:after{
+box-shadow: 0 -1px 0 #640909 inset,1px 0 0 #640909 inset;
+}
+.yellow.rarrow:active:after{
+box-shadow: 0 1px 0 #816b1f inset,-1px 0 0 #816b1f inset;
+}
+.yellow.larrow:active:after{
+box-shadow: 0 -1px 0 #816b1f inset,1px 0 0 #816b1f inset;
+}
+.green.rarrow:active:after{
+box-shadow: 0 1px 0 #4d7254 inset,-1px 0 0 #4d7254 inset;
+}
+.green.larrow:active:after{
+box-shadow: 0 -1px 0 #4d7254 inset,1px 0 0 #4d7254 inset;
+}
+.blue.rarrow:active:after{
+box-shadow: 0 1px 0 #114566 inset,-1px 0 0 #114566 inset;
+}
+.blue.larrow:active:after{
+box-shadow: 0 -1px 0 #114566 inset,1px 0 0 #114566 inset;
+}
+    </style>
+</head>
+<body>
+<div class="page">
+    
+    <section class="demo">
+<div class="demo_con">
+ 
+    <button type="button" class="button gray">立即购买</button>
+    <button type="button" class="button black">立即购买</button>
+    <button type="button" class="button red">立即购买</button>
+    <button type="button" class="button yellow">立即购买</button>
+    <button type="button" class="button green">立即购买</button>
+    <button type="button" class="button blue">立即购买</button>
+ 
+    <button type="button" class="button gray round">下载</button>
+    <button type="button" class="button black round">下载</button>
+    <button type="button" class="button red round">下载</button>
+    <button type="button" class="button yellow round">下载</button>
+    <button type="button" class="button green round">下载</button>
+    <button type="button" class="button blue round">下载</button>
+ 
+    <button type="button" class="button gray side">下载</button>
+    <button type="button" class="button black side">下载</button>
+    <button type="button" class="button red side">下载</button>
+    <button type="button" class="button yellow side">下载</button>
+    <button type="button" class="button green side">下载</button>
+    <button type="button" class="button blue side">下载</button>
+ 
+    <button type="button" class="button gray tags">注册</button>
+    <button type="button" class="button black tags">注册</button>
+    <button type="button" class="button red tags">注册</button>
+    <button type="button" class="button yellow tags">注册</button>
+    <button type="button" class="button green tags">注册</button>
+    <button type="button" class="button blue tags">注册</button>
+ 
+    <button type="button" class="button gray rarrow">更多</button>
+    <button type="button" class="button black rarrow">更多</button>
+    <button type="button" class="button red rarrow">更多</button>
+    <button type="button" class="button yellow rarrow">更多</button>
+    <button type="button" class="button green rarrow">更多</button>
+    <button type="button" class="button blue rarrow">更多</button>
+ 
+    <button type="button" class="button gray larrow">返回</button>
+    <button type="button" class="button black larrow">返回</button>
+    <button type="button" class="button red larrow">返回</button>
+    <button type="button" class="button yellow larrow">返回</button>
+    <button type="button" class="button green larrow">返回</button>
+    <button type="button" class="button blue larrow">返回</button>
+</div>    
+    </section>
+</div>
+</body>
+</html>
+
+
+
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br><span class="line">623</span><br><span class="line">624</span><br><span class="line">625</span><br><span class="line">626</span><br><span class="line">627</span><br><span class="line">628</span><br><span class="line">629</span><br><span class="line">630</span><br><span class="line">631</span><br><span class="line">632</span><br><span class="line">633</span><br><span class="line">634</span><br><span class="line">635</span><br><span class="line">636</span><br><span class="line">637</span><br><span class="line">638</span><br><span class="line">639</span><br><span class="line">640</span><br><span class="line">641</span><br><span class="line">642</span><br><span class="line">643</span><br><span class="line">644</span><br><span class="line">645</span><br><span class="line">646</span><br><span class="line">647</span><br><span class="line">648</span><br><span class="line">649</span><br><span class="line">650</span><br><span class="line">651</span><br><span class="line">652</span><br><span class="line">653</span><br><span class="line">654</span><br><span class="line">655</span><br><span class="line">656</span><br><span class="line">657</span><br><span class="line">658</span><br><span class="line">659</span><br><span class="line">660</span><br><span class="line">661</span><br><span class="line">662</span><br><span class="line">663</span><br><span class="line">664</span><br><span class="line">665</span><br><span class="line">666</span><br><span class="line">667</span><br><span class="line">668</span><br><span class="line">669</span><br><span class="line">670</span><br><span class="line">671</span><br><span class="line">672</span><br><span class="line">673</span><br><span class="line">674</span><br><span class="line">675</span><br><span class="line">676</span><br><span class="line">677</span><br><span class="line">678</span><br><span class="line">679</span><br><span class="line">680</span><br><span class="line">681</span><br><span class="line">682</span><br><span class="line">683</span><br><span class="line">684</span><br><span class="line">685</span><br><span class="line">686</span><br><span class="line">687</span><br><span class="line">688</span><br><span class="line">689</span><br><span class="line">690</span><br><span class="line">691</span><br><span class="line">692</span><br><span class="line">693</span><br><span class="line">694</span><br><span class="line">695</span><br><span class="line">696</span><br><span class="line">697</span><br><span class="line">698</span><br><span class="line">699</span><br><span class="line">700</span><br><span class="line">701</span><br><span class="line">702</span><br><span class="line">703</span><br><span class="line">704</span><br><span class="line">705</span><br><span class="line">706</span><br><span class="line">707</span><br><span class="line">708</span><br><span class="line">709</span><br><span class="line">710</span><br><span class="line">711</span><br><span class="line">712</span><br><span class="line">713</span><br><span class="line">714</span><br><span class="line">715</span><br><span class="line">716</span><br><span class="line">717</span><br><span class="line">718</span><br><span class="line">719</span><br><span class="line">720</span><br><span class="line">721</span><br><span class="line">722</span><br><span class="line">723</span><br><span class="line">724</span><br><span class="line">725</span><br><span class="line">726</span><br><span class="line">727</span><br><span class="line">728</span><br><span class="line">729</span><br><span class="line">730</span><br><span class="line">731</span><br><span class="line">732</span><br><span class="line">733</span><br><span class="line">734</span><br><span class="line">735</span><br><span class="line">736</span><br><span class="line">737</span><br><span class="line">738</span><br><span class="line">739</span><br><span class="line">740</span><br><span class="line">741</span><br><span class="line">742</span><br><span class="line">743</span><br><span class="line">744</span><br><span class="line">745</span><br><span class="line">746</span><br><span class="line">747</span><br><span class="line">748</span><br><span class="line">749</span><br><span class="line">750</span><br><span class="line">751</span><br><span class="line">752</span><br><span class="line">753</span><br><span class="line">754</span><br><span class="line">755</span><br><span class="line">756</span><br><span class="line">757</span><br><span class="line">758</span><br><span class="line">759</span><br><span class="line">760</span><br><span class="line">761</span><br><span class="line">762</span><br><span class="line">763</span><br><span class="line">764</span><br><span class="line">765</span><br><span class="line">766</span><br><span class="line">767</span><br><span class="line">768</span><br><span class="line">769</span><br><span class="line">770</span><br><span class="line">771</span><br><span class="line">772</span><br><span class="line">773</span><br><span class="line">774</span><br><span class="line">775</span><br><span class="line">776</span><br><span class="line">777</span><br><span class="line">778</span><br><span class="line">779</span><br><span class="line">780</span><br><span class="line">781</span><br><span class="line">782</span><br><span class="line">783</span><br><span class="line">784</span><br><span class="line">785</span><br><span class="line">786</span><br><span class="line">787</span><br><span class="line">788</span><br><span class="line">789</span><br><span class="line">790</span><br><span class="line">791</span><br><span class="line">792</span><br><span class="line">793</span><br><span class="line">794</span><br><span class="line">795</span><br><span class="line">796</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">HTML</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en-US&quot;</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span><br><br>  <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><br><span class="css">    <span class="hljs-selector-tag">body</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#f5faff</span>;</span><br>    &#125;<br><br>    .demo_con &#123;<br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">960px</span>;</span><br><span class="css">      <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span> auto <span class="hljs-number">0</span>;</span><br>    &#125;<br><br>    .button &#123;<br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">140px</span>;</span><br><span class="css">      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">38px</span>;</span><br><span class="css">      <span class="hljs-attribute">text-align</span>: center;</span><br><span class="css">      <span class="hljs-attribute">font-weight</span>: bold;</span><br><span class="css">      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">#333</span>;</span><br><span class="css">      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;</span><br><span class="css">      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">20px</span> <span class="hljs-number">20px</span> <span class="hljs-number">0</span>;</span><br><span class="css">      <span class="hljs-attribute">position</span>: relative;</span><br><span class="css">      <span class="hljs-attribute">overflow</span>: hidden;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:nth-child</span>(<span class="hljs-number">6</span>n) &#123;</span><br><span class="css">      <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;</span><br>    &#125;<br><br>    .button.gray &#123;<br><span class="css">      <span class="hljs-attribute">color</span>: <span class="hljs-number">#8c96a0</span>;</span><br><span class="css">      <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#dce1e6</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#fff</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#a8abae</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br>    &#125;<br><br>    .button.black &#123;<br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#8b8b8b</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#3d3d3d</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#8b8b8b</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4c4c4c</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4a4a4a</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4a4a4a</span>);</span><br>    &#125;<br><br>    .button.red &#123;<br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#b42323</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#e99494</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#954b4b</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#e99494</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#d53939</span>, <span class="hljs-number">#b92929</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#d53939</span>, <span class="hljs-number">#b92929</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#d53939</span>, <span class="hljs-number">#b92929</span>);</span><br>    &#125;<br><br>    .button.yellow &#123;<br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#d2a000</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#fedd71</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#a38b39</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#fedd71</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#fece34</span>, <span class="hljs-number">#d8a605</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#fece34</span>, <span class="hljs-number">#d8a605</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#fece34</span>, <span class="hljs-number">#d8a605</span>);</span><br>    &#125;<br><br>    .button.green &#123;<br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#64c878</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#b9ecc4</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#6c9f76</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#b9ecc4</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#90dfa2</span>, <span class="hljs-number">#84d494</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#90dfa2</span>, <span class="hljs-number">#84d494</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#90dfa2</span>, <span class="hljs-number">#84d494</span>);</span><br>    &#125;<br><br>    .button.blue &#123;<br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#1e7db9</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#8fcaee</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#497897</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#8fcaee</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#42a4e0</span>, <span class="hljs-number">#2e88c0</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#42a4e0</span>, <span class="hljs-number">#2e88c0</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#42a4e0</span>, <span class="hljs-number">#2e88c0</span>);</span><br>    &#125;<br><br>    .round,<br>    .side,<br>    .tags &#123;<br><span class="css">      <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">30px</span>;</span><br>    &#125;<br><br>    .round:after &#123;<br><span class="css">      <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">      <span class="hljs-attribute">display</span>: inline-block;</span><br><span class="css">      <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;\003c&quot;</span>;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;</span><br><span class="css">      <span class="hljs-attribute">right</span>: <span class="hljs-number">10px</span>;</span><br><span class="css">      <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">10px</span>;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">17px</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;</span><br><span class="css">      <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">3px</span>;</span><br><span class="css">      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">18px</span>;</span><br><span class="css">      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;</span><br><span class="css">      <span class="hljs-attribute">font-weight</span>: normal;</span><br><span class="css">      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;</span><br><span class="css">      <span class="hljs-attribute">text-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#333</span>;</span><br><span class="css">      -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);</span><br><span class="css">      -moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);</span><br>    &#125;<br><br>    .gray.round:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">1</span>) inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">2</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#dce1e6</span>, <span class="hljs-number">#dde2e7</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#dce1e6</span>, <span class="hljs-number">#dde2e7</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#dce1e6</span>, <span class="hljs-number">#dde2e7</span>);</span><br><span class="css">      <span class="hljs-attribute">text-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#fff</span>;</span><br>    &#125;<br><br>    .black.round:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, .<span class="hljs-number">5</span>) inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">9</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#333</span>, <span class="hljs-number">#454545</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#333</span>, <span class="hljs-number">#454545</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#333</span>, <span class="hljs-number">#454545</span>);</span><br>    &#125;<br><br>    .red.round:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, .<span class="hljs-number">6</span>) inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">130</span>, <span class="hljs-number">25</span>, <span class="hljs-number">25</span>, .<span class="hljs-number">9</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#b12222</span>, <span class="hljs-number">#b42323</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#b12222</span>, <span class="hljs-number">#b42323</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#b12222</span>, <span class="hljs-number">#b42323</span>);</span><br>    &#125;<br><br>    .yellow.round:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, .<span class="hljs-number">8</span>) inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">148</span>, <span class="hljs-number">131</span>, <span class="hljs-number">4</span>, .<span class="hljs-number">9</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#cf9d00</span>, <span class="hljs-number">#d2a000</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#cf9d00</span>, <span class="hljs-number">#d2a000</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#cf9d00</span>, <span class="hljs-number">#d2a000</span>);</span><br>    &#125;<br><br>    .green.round:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, .<span class="hljs-number">8</span>) inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">51</span>, <span class="hljs-number">126</span>, <span class="hljs-number">66</span>, .<span class="hljs-number">9</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#64c878</span>, <span class="hljs-number">#6dcb80</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#64c878</span>, <span class="hljs-number">#6dcb80</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#64c878</span>, <span class="hljs-number">#6dcb80</span>);</span><br>    &#125;<br><br>    .blue.round:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, .<span class="hljs-number">8</span>) inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">18</span>, <span class="hljs-number">85</span>, <span class="hljs-number">128</span>, .<span class="hljs-number">9</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#1e7db9</span>, <span class="hljs-number">#2b85bd</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#1e7db9</span>, <span class="hljs-number">#2b85bd</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#1e7db9</span>, <span class="hljs-number">#2b85bd</span>);</span><br>    &#125;<br><br>    .side:after &#123;<br><span class="css">      <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">      <span class="hljs-attribute">display</span>: inline-block;</span><br><span class="css">      <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;\00bb&quot;</span>;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">3px</span>;</span><br><span class="css">      <span class="hljs-attribute">right</span>: -<span class="hljs-number">4px</span>;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">38px</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>;</span><br><span class="css">      <span class="hljs-attribute">font-weight</span>: normal;</span><br><span class="css">      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">26px</span>;</span><br><span class="css">      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">5px</span>;</span><br><span class="css">      <span class="hljs-attribute">text-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#333</span>;</span><br><span class="css">      -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);</span><br><span class="css">      -moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);</span><br>    &#125;<br><br>    .gray.side:after &#123;<br><span class="css">      <span class="hljs-attribute">text-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#d4d4d4</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#eceef1</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#e1e6ea</span>, <span class="hljs-number">#f2f2f6</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#e1e6ea</span>, <span class="hljs-number">#f2f2f6</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#e1e6ea</span>, <span class="hljs-number">#f2f2f6</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br>    .black.side:after &#123;<br><span class="css">      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#222</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#606060</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#373737</span>, <span class="hljs-number">#555</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#373737</span>, <span class="hljs-number">#555</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#373737</span>, <span class="hljs-number">#555</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br>    .red.side:after &#123;<br><span class="css">      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#aa1e1e</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#c75959</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#b82929</span>, <span class="hljs-number">#d73f3f</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#b82929</span>, <span class="hljs-number">#d73f3f</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#b82929</span>, <span class="hljs-number">#d73f3f</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br>    .yellow.side:after &#123;<br><span class="css">      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#ba8f06</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#deb842</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#d5a406</span>, <span class="hljs-number">#fdc40b</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#d5a406</span>, <span class="hljs-number">#fdc40b</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#d5a406</span>, <span class="hljs-number">#fdc40b</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br>    .green.side:after &#123;<br><span class="css">      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#53b567</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#8ad599</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#69ca7c</span>, <span class="hljs-number">#91e5a5</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#69ca7c</span>, <span class="hljs-number">#91e5a5</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#69ca7c</span>, <span class="hljs-number">#91e5a5</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br>    .blue.side:after &#123;<br><span class="css">      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#1971a8</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#559dca</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#2482bd</span>, <span class="hljs-number">#3fa2e0</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#2482bd</span>, <span class="hljs-number">#3fa2e0</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#2482bd</span>, <span class="hljs-number">#3fa2e0</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br>    .tags:after &#123;<br><span class="css">      <span class="hljs-attribute">font-weight</span>: normal;</span><br><span class="css">      <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">      <span class="hljs-attribute">display</span>: inline-block;</span><br><span class="css">      <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;FREE&quot;</span>;</span><br><span class="css">      <span class="hljs-attribute">top</span>: -<span class="hljs-number">3px</span>;</span><br><span class="css">      <span class="hljs-attribute">right</span>: -<span class="hljs-number">33px</span>;</span><br><span class="css">      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">text-shadow</span>: none;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">85px</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">25px</span>;</span><br><span class="css">      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">28px</span>;</span><br><span class="css">      -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>) <span class="hljs-built_in">scale</span>(.<span class="hljs-number">7</span>, .<span class="hljs-number">7</span>);</span><br><span class="css">      -moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>) <span class="hljs-built_in">scale</span>(.<span class="hljs-number">7</span>, .<span class="hljs-number">7</span>);</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>) <span class="hljs-built_in">scale</span>(.<span class="hljs-number">7</span>, .<span class="hljs-number">7</span>);</span><br>    &#125;<br><br>    .gray.tags:after &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#8c96a0</span>;</span><br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#fff</span>;</span><br>    &#125;<br><br>    .black.tags:after &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;</span><br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#777</span>;</span><br>    &#125;<br><br>    .red.tags:after &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#b42323</span>;</span><br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#df4141</span>;</span><br>    &#125;<br><br>    .yellow.tags:after &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#d2a000</span>;</span><br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#fcc100</span>;</span><br>    &#125;<br><br>    .green.tags:after &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#64c878</span>;</span><br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#9bebac</span>;</span><br>    &#125;<br><br>    .blue.tags:after &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#1e7db9</span>;</span><br><span class="css">      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#54b1e9</span>;</span><br>    &#125;<br><br>    .button.rarrow,<br>    .button.larrow &#123;<br><span class="css">      <span class="hljs-attribute">overflow</span>: visible;</span><br>    &#125;<br><br>    .rarrow:after,<br>    .rarrow:before,<br>    .larrow:after,<br>    .larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">      <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;</span><br><span class="css">      <span class="hljs-attribute">display</span>: block;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">28px</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">28px</span>;</span><br><span class="css">      -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);</span><br><span class="css">      -moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);</span><br>    &#125;<br><br>    .rarrow:before &#123;<br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">27px</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">27px</span>;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">6px</span>;</span><br><span class="css">      <span class="hljs-attribute">right</span>: -<span class="hljs-number">13px</span>;</span><br><span class="css">      <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(auto auto <span class="hljs-number">26px</span> <span class="hljs-number">2px</span>);</span><br>    &#125;<br><br>    .rarrow:after &#123;<br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">6px</span>;</span><br><span class="css">      <span class="hljs-attribute">right</span>: -<span class="hljs-number">12px</span>;</span><br><span class="css">      <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(auto auto <span class="hljs-number">26px</span> <span class="hljs-number">2px</span>);</span><br>    &#125;<br><br>    .gray.rarrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#d6dbe0</span>;</span><br>    &#125;<br><br>    .gray.rarrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#b7babd</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br>    &#125;<br><br>    .black.rarrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;</span><br>    &#125;<br><br>    .black.rarrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#8B8B8B</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#3d3d3d</span> inset, -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#8B8B8B</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4C4C4C</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4C4C4C</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4C4C4C</span>);</span><br>    &#125;<br><br>    .red.rarrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#B42323</span>;</span><br>    &#125;<br><br>    .red.rarrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#E99494</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#954B4B</span> inset, -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#E99494</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#D53939</span>, <span class="hljs-number">#B92929</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#D53939</span>, <span class="hljs-number">#B92929</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#D53939</span>, <span class="hljs-number">#B92929</span>);</span><br>    &#125;<br><br>    .yellow.rarrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#D2A000</span>;</span><br>    &#125;<br><br>    .yellow.rarrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#FEDD71</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#A38B39</span> inset, -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#FEDD71</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#FECE34</span>, <span class="hljs-number">#D8A605</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#FECE34</span>, <span class="hljs-number">#D8A605</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#FECE34</span>, <span class="hljs-number">#D8A605</span>);</span><br>    &#125;<br><br>    .green.rarrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#64C878</span>;</span><br>    &#125;<br><br>    .green.rarrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#B9ECC4</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#6C9F76</span> inset, -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#B9ECC4</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#90DFA2</span>, <span class="hljs-number">#84D494</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#90DFA2</span>, <span class="hljs-number">#84D494</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#90DFA2</span>, <span class="hljs-number">#84D494</span>);</span><br>    &#125;<br><br>    .blue.rarrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#1E7DB9</span>;</span><br>    &#125;<br><br>    .blue.rarrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#8FCAEE</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#497897</span> inset, -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#8FCAEE</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#42A4E0</span>, <span class="hljs-number">#2E88C0</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#42A4E0</span>, <span class="hljs-number">#2E88C0</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#42A4E0</span>, <span class="hljs-number">#2E88C0</span>);</span><br>    &#125;<br><br>    .larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">6px</span>;</span><br><span class="css">      <span class="hljs-attribute">left</span>: -<span class="hljs-number">13px</span>;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">27px</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">27px</span>;</span><br><span class="css">      <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(<span class="hljs-number">2px</span> <span class="hljs-number">26px</span> auto auto);</span><br>    &#125;<br><br>    .larrow:after &#123;<br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">6px</span>;</span><br><span class="css">      <span class="hljs-attribute">left</span>: -<span class="hljs-number">12px</span>;</span><br><span class="css">      <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(<span class="hljs-number">2px</span> <span class="hljs-number">26px</span> auto auto);</span><br>    &#125;<br><br>    .gray.larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#d6dbe0</span>;</span><br>    &#125;<br><br>    .gray.larrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#b7babd</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#e4e8ec</span>);</span><br>    &#125;<br><br>    .black.larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;</span><br>    &#125;<br><br>    .black.larrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#3d3d3d</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">#8B8B8B</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#8B8B8B</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4C4C4C</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4C4C4C</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#656565</span>, <span class="hljs-number">#4C4C4C</span>);</span><br>    &#125;<br><br>    .red.larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#B42323</span>;</span><br>    &#125;<br><br>    .red.larrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#954B4B</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">#E99494</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#E99494</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#D53939</span>, <span class="hljs-number">#B92929</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#D53939</span>, <span class="hljs-number">#B92929</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#D53939</span>, <span class="hljs-number">#B92929</span>);</span><br>    &#125;<br><br>    .yellow.larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#D2A000</span>;</span><br>    &#125;<br><br>    .yellow.larrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#A38B39</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">#FEDD71</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#FEDD71</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#FECE34</span>, <span class="hljs-number">#D8A605</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#FECE34</span>, <span class="hljs-number">#D8A605</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#FECE34</span>, <span class="hljs-number">#D8A605</span>);</span><br>    &#125;<br><br>    .green.larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#64C878</span>;</span><br>    &#125;<br><br>    .green.larrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#6C9F76</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">#B9ECC4</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#B9ECC4</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#90DFA2</span>, <span class="hljs-number">#84D494</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#90DFA2</span>, <span class="hljs-number">#84D494</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#90DFA2</span>, <span class="hljs-number">#84D494</span>);</span><br>    &#125;<br><br>    .blue.larrow:before &#123;<br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-number">#1E7DB9</span>;</span><br>    &#125;<br><br>    .blue.larrow:after &#123;<br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#497897</span> inset, <span class="hljs-number">0</span> -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">#8FCAEE</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#8FCAEE</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#42A4E0</span>, <span class="hljs-number">#2E88C0</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#42A4E0</span>, <span class="hljs-number">#2E88C0</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#42A4E0</span>, <span class="hljs-number">#2E88C0</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-pseudo">:hover</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#fefefe</span>, <span class="hljs-number">#ebeced</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#ebeced</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#f2f3f7</span>, <span class="hljs-number">#ebeced</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-pseudo">:hover</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#818181</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#818181</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#818181</span>, <span class="hljs-number">#575757</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-pseudo">:hover</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#eb6f6f</span>, <span class="hljs-number">#c83c3c</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#eb6f6f</span>, <span class="hljs-number">#c83c3c</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#eb6f6f</span>, <span class="hljs-number">#c83c3c</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-pseudo">:hover</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#ffd859</span>, <span class="hljs-number">#e3bb38</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#ffd859</span>, <span class="hljs-number">#e3bb38</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#ffd859</span>, <span class="hljs-number">#e3bb38</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-pseudo">:hover</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#aaebb9</span>, <span class="hljs-number">#82d392</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#aaebb9</span>, <span class="hljs-number">#82d392</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#aaebb9</span>, <span class="hljs-number">#82d392</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-pseudo">:hover</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#70bfef</span>, <span class="hljs-number">#4097ce</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#70bfef</span>, <span class="hljs-number">#4097ce</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#70bfef</span>, <span class="hljs-number">#4097ce</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-pseudo">:active</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#a8abae</span> inset, <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-pseudo">:active</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#111</span> inset, <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#424242</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#424242</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#424242</span>, <span class="hljs-number">#575757</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-pseudo">:active</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#5b0505</span> inset, <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#bf2626</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#bf2626</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#bf2626</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-pseudo">:active</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#816b1f</span> inset, <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-pseudo">:active</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#4d7254</span> inset, <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#5eac6e</span>, <span class="hljs-number">#72b37e</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#5eac6e</span>, <span class="hljs-number">#72b37e</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#5eac6e</span>, <span class="hljs-number">#72b37e</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-pseudo">:active</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">3px</span> <span class="hljs-number">#114566</span> inset, <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#e7ebee</span>, <span class="hljs-number">#f8f8f8</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#e7ebee</span>, <span class="hljs-number">#f8f8f8</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#e7ebee</span>, <span class="hljs-number">#f8f8f8</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#555</span>, <span class="hljs-number">#6f6f6f</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#555</span>, <span class="hljs-number">#6f6f6f</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#555</span>, <span class="hljs-number">#6f6f6f</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#c43333</span>, <span class="hljs-number">#dc4949</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#c43333</span>, <span class="hljs-number">#dc4949</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#c43333</span>, <span class="hljs-number">#dc4949</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#e1b21a</span>, <span class="hljs-number">#fbc71d</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#e1b21a</span>, <span class="hljs-number">#fbc71d</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#e1b21a</span>, <span class="hljs-number">#fbc71d</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#85da95</span>, <span class="hljs-number">#94e0a5</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#85da95</span>, <span class="hljs-number">#94e0a5</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#85da95</span>, <span class="hljs-number">#94e0a5</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#338fc8</span>, <span class="hljs-number">#56b2eb</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#338fc8</span>, <span class="hljs-number">#56b2eb</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#338fc8</span>, <span class="hljs-number">#56b2eb</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">top</span>: <span class="hljs-number">4px</span>;</span><br><span class="css">      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#9fa6ab</span>;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#a8abae</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#111</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#414040</span>, <span class="hljs-number">#4d4c4c</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#414040</span>, <span class="hljs-number">#4d4c4c</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#414040</span>, <span class="hljs-number">#4d4c4c</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#4b0707</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#b11a1a</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#b11a1a</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#b11a1a</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#816b1f</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#33663d</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#63a870</span>, <span class="hljs-number">#72b37e</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#63a870</span>, <span class="hljs-number">#72b37e</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#63a870</span>, <span class="hljs-number">#72b37e</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.side</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#114566</span> inset;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(right, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(right, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span> <span class="hljs-number">60%</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(right, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span> <span class="hljs-number">60%</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:hover</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#fefefe</span>, <span class="hljs-number">#ebeced</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#fefefe</span>, <span class="hljs-number">#ebeced</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#fefefe</span>, <span class="hljs-number">#ebeced</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:hover</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#818181</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#818181</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#818181</span>, <span class="hljs-number">#575757</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:hover</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#eb6f6f</span>, <span class="hljs-number">#c83c3c</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#eb6f6f</span>, <span class="hljs-number">#c83c3c</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#eb6f6f</span>, <span class="hljs-number">#c83c3c</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:hover</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#ffd859</span>, <span class="hljs-number">#e3bb38</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#ffd859</span>, <span class="hljs-number">#e3bb38</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#ffd859</span>, <span class="hljs-number">#e3bb38</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:hover</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#aaebb9</span>, <span class="hljs-number">#82d392</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#aaebb9</span>, <span class="hljs-number">#82d392</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#aaebb9</span>, <span class="hljs-number">#82d392</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:hover</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:hover</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#70bfef</span>, <span class="hljs-number">#4097ce</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#70bfef</span>, <span class="hljs-number">#4097ce</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#70bfef</span>, <span class="hljs-number">#4097ce</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#e4e8ec</span>, <span class="hljs-number">#e4e8ec</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#424242</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#424242</span>, <span class="hljs-number">#575757</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#424242</span>, <span class="hljs-number">#575757</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#bf2626</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#bf2626</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#b11a1a</span>, <span class="hljs-number">#bf2626</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#d3a203</span>, <span class="hljs-number">#dba907</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#63a870</span>, <span class="hljs-number">#72b37e</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#63a870</span>, <span class="hljs-number">#72b37e</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#63a870</span>, <span class="hljs-number">#72b37e</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after,</span><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top left, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">-moz-linear-gradient</span>(top left, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span>);</span><br><span class="css">      <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(top left, <span class="hljs-number">#1a71a8</span>, <span class="hljs-number">#1976b1</span>);</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#b7babd</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#b7babd</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.gray</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#b7babd</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#b7babd</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#333</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#333</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.black</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#333</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#333</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#640909</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#640909</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.red</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#640909</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#640909</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#816b1f</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#816b1f</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.yellow</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#816b1f</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#816b1f</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#4d7254</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#4d7254</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.green</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#4d7254</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#4d7254</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.rarrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#114566</span> inset, -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#114566</span> inset;</span><br>    &#125;<br><br><span class="css">    <span class="hljs-selector-class">.blue</span><span class="hljs-selector-class">.larrow</span><span class="hljs-selector-pseudo">:active</span>:after &#123;</span><br><span class="css">      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#114566</span> inset, <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">#114566</span> inset;</span><br>    &#125;<br>  <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page&quot;</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo_con&quot;</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button gray&quot;</span>&gt;</span>立即购买<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button black&quot;</span>&gt;</span>立即购买<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button red&quot;</span>&gt;</span>立即购买<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button yellow&quot;</span>&gt;</span>立即购买<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button green&quot;</span>&gt;</span>立即购买<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button blue&quot;</span>&gt;</span>立即购买<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button gray round&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button black round&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button red round&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button yellow round&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button green round&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button blue round&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button gray side&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button black side&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button red side&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button yellow side&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button green side&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button blue side&quot;</span>&gt;</span>下载<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button gray tags&quot;</span>&gt;</span>注册<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button black tags&quot;</span>&gt;</span>注册<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button red tags&quot;</span>&gt;</span>注册<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button yellow tags&quot;</span>&gt;</span>注册<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button green tags&quot;</span>&gt;</span>注册<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button blue tags&quot;</span>&gt;</span>注册<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button gray rarrow&quot;</span>&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button black rarrow&quot;</span>&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button red rarrow&quot;</span>&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button yellow rarrow&quot;</span>&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button green rarrow&quot;</span>&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button blue rarrow&quot;</span>&gt;</span>更多<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button gray larrow&quot;</span>&gt;</span>返回<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button black larrow&quot;</span>&gt;</span>返回<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button red larrow&quot;</span>&gt;</span>返回<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button yellow larrow&quot;</span>&gt;</span>返回<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button green larrow&quot;</span>&gt;</span>返回<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button blue larrow&quot;</span>&gt;</span>返回<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br><br></code></pre></div></td></tr></table></figure>
+
+  
+</article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+    
+
+    
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        蜀ICP备2021018300号
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+  <script defer src="/blog/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/blog/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/blog/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+<script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>
