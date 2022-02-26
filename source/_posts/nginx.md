@@ -39,12 +39,12 @@ enabled=1
 创建 nginx.repo 文件,把上面的源代码复制进去
 
 ```c++
-vim / etc / yum.repos.d / nginx.repo;
+vim/etc/yum.repos.d/nginx.repo;
 
 ```
 
 启动命令
 
 ```javascript
-nginx - c / etc / nginx / nginx.conf;
+nginx -c/etc/nginx/nginx.conf;
 ```
